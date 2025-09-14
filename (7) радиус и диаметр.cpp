@@ -11,7 +11,7 @@ int main() {
 		if (circle_area < 1) std::cout << "invalid value\n";
 	}
 	std::cout << "radius is:\n" << sqrt (circle_area / PI) << '\n';
-
 	std::cout << "diameter is:\n" << 2 * sqrt(circle_area / PI);
 	return 0;
+
 }
