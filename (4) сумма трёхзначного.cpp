@@ -7,6 +7,7 @@ int main() {
 		std::cin >> number;
 		if (number < 100 || number > 999) std::cout << "invalid value\n";
 	}
-	std::cout << "you number backwards is:\n" << (number / 100) + (number % 10) * 100 + 10 * (number / 10 % 10) << '\n';
+	std::cout << "sum of digits is: " <<(number / 100) + (number % 10) + (number / 10) % 10;
 	return 0;
+
 }
