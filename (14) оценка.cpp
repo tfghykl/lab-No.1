@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 
 int main() {
+	setlocale(LC_ALL, "Russian");
 	int number{};
 	std::cout << "input your score:\n";
 	std::cin >> number;
@@ -9,4 +10,5 @@ int main() {
 	else if (number < 60) std::cout << "Хорошо";
 	else std::cout << "Отлично";
 	return 0;
+
 }
