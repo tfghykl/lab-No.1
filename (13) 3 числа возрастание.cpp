@@ -1,13 +1,21 @@
 ﻿#include <iostream>
 
 int main() {
-	int number{};
-	setlocale(LC_ALL, "Russian");
-	std::cout << "input your score:\n";
-	std::cin >> number;
-	if (number < 17) std::cout << "Плохо";
-	else if (number < 30) std::cout << "Удовлетворительно";
-	else if (number < 60) std::cout << "Хорошо";
-	else std::cout << "Отлично";
+	int a{};
+	int b{};
+	int c{};
+	int biggest{}, smallest{}, middle{};
+	std::cout << "input  3 numbers:\n";
+	std::cin >> a >> b >> c;
+	biggest = a;
+	if (b > biggest) biggest = b;
+	if (c > biggest) biggest = c;
+	smallest = a;
+	if (b < smallest) smallest = b;
+	if (c < smallest) smallest = c;
+	if ((a == biggest && b == smallest) || (a == smallest && b == biggest)) middle = c;
+	if ((c == biggest && b == smallest) || (c == smallest && b == biggest)) middle = a;
+	if ((a == biggest && c == smallest) || (a == smallest && c == biggest)) middle = b;
+	std::cout << smallest << ' ' << middle << ' ' << biggest;
 	return 0;
 }
